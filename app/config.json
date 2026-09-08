@@ -1,1 +1,16 @@
-{"slug": "sourceweave", "title": "SourceWeave", "description": "See where a health record begins.", "attribution": "Source discovery uses the FinchNode API."}
+{
+  "slug": "sourceweave",
+  "title": "SourceWeave",
+  "description": "See where a health record begins.",
+  "attribution": "Source discovery uses the FinchNode API.",
+  "categories": [
+    "demographics",
+    "medications",
+    "conditions",
+    "labs",
+    "vitals",
+    "allergies",
+    "immunizations",
+    "encounters"
+  ]
+}
