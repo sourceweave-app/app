@@ -1,5 +1,7 @@
 # SourceWeave
 
+[Open the live demo](https://sourceweave.onrender.com/) · [Source repository](https://github.com/sourceweave-app/app)
+
 See where a health record begins.
 
 Source discovery uses the FinchNode API. [Explore FinchNode](https://finchnode.com).
@@ -54,3 +56,7 @@ MIT. FinchNode and source-system names belong to their respective owners. This i
 ## Optional domain
 
 `sourceweaveapp.com` was unregistered in the .com registry on 2026-09-08. This is an availability signal, not a reservation; verify the registrar offer before purchasing. No domain has been bought.
+
+## Updating the hosted app
+
+This deployment uses Render’s Public Git Repository option. After pushing a change, open the Render service and choose **Manual Deploy → Deploy latest commit**. Automatic deploys and previews for public repository URLs require a Blueprint setup. The hosted site has Content-Security-Policy, Referrer-Policy, and X-Content-Type-Options headers configured.
