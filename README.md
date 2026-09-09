@@ -2,7 +2,7 @@
 
 Trace healthcare sources, returned record categories and supplied sync details with SourceWeave. Understand provenance and the limits of an authorized snapshot.
 
-**Site:** https://sourceweave.onrender.com/  
+**Site:** https://sourceweaveapp.com/
 **Repository:** https://github.com/sourceweave-app/app
 
 ## Production integration
@@ -45,20 +45,20 @@ CSP `connect-src` must allow only `https://finchapps-connect.onrender.com`. Depl
 
 ## Privacy and verification
 
-Read [the data-handling notice](https://sourceweave.onrender.com/privacy.html). No clinical record is saved in browser storage; visible data is held in memory, cleared on hiding the page, and periodically revalidated. No browser agent tools expose medical data. Unit tests validate production envelopes and preserve source values. Backend tests cover origin/session isolation, scope checks, invalid environments, expiration and signed revocation without using real medical data.
+Read [the data-handling notice](https://sourceweaveapp.com/privacy.html). No clinical record is saved in browser storage; visible data is held in memory, cleared on hiding the page, and periodically revalidated. No browser agent tools expose medical data. Unit tests validate production envelopes and preserve source values. Backend tests cover origin/session isolation, scope checks, invalid environments, expiration and signed revocation without using real medical data.
 
 A real patient must perform their own EHR authentication and consent; these tests do not claim successful patient connectivity. Availability varies by healthcare organization.
 
-## Domain candidate
+## Custom domain
 
-`sourceweaveapp.com` was available on September 8, 2026; Porkbun displayed $11.08 for initial registration and renewal. No domain was purchased. Availability and price can change. Add it to Render and the backend's explicit origin allowlist before use.
+`sourceweaveapp.com` is registered through Squarespace and assigned to this Render site. DNS uses an apex A record pointing to `216.24.57.1` and a `www` CNAME pointing to `sourceweave.onrender.com`. Render redirects `www` to the apex domain and manages HTTPS certificates.
 
 <!-- public-discovery -->
 ## Public guide and project context
 
-[Trace a record back to its source](https://sourceweave.onrender.com/guides/trace-a-record-back-to-its-source.html) — How SourceWeave separates organization identity, synchronization time and category coverage when presenting provenance.
+[Trace a record back to its source](https://sourceweaveapp.com/guides/trace-a-record-back-to-its-source.html) — How SourceWeave separates organization identity, synchronization time and category coverage when presenting provenance.
 
-[Search SourceWeave guides](https://sourceweave.onrender.com/guides/) · [About the site](https://sourceweave.onrender.com/about.html) · [Sitemap](https://sourceweave.onrender.com/sitemap.xml)
+[Search SourceWeave guides](https://sourceweaveapp.com/guides/) · [About the site](https://sourceweaveapp.com/about.html) · [Sitemap](https://sourceweaveapp.com/sitemap.xml)
 
 SourceWeave is a standalone product with its own interface, documentation and repository, prepared for independent business operation and continued development. Its FinchNode integration is documented in the code. Live production activation remains pending.
 
@@ -66,7 +66,7 @@ SourceWeave is a standalone product with its own interface, documentation and re
 
 Edit `content/seo.json` for reviewed article text and site metadata. `npm run build` generates public HTML pages, a sitemap, social metadata and structured data, then prerenders the actual React homepage. `npm run test:seo` checks the built crawl surface after a build. Public guide search filters only public text in the browser; no patient data or search analytics enter the index.
 
-Keep canonical URLs on the deployed origin until a custom domain is registered and configured. Add only public, canonical pages to the sitemap. Validate links, mobile layout and the built HTML after editorial changes. Search engine indexing and rich results are not guaranteed.
+Keep canonical URLs on the custom domain configured in `content/seo.json`. Add only public, canonical pages to the sitemap. Validate links, mobile layout and the built HTML after editorial changes. Search engine indexing and rich results are not guaranteed.
 
 ## Independent business handoff
 

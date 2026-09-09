@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sourceweave.onrender.com/sitemap.xml
+Sitemap: https://sourceweaveapp.com/sitemap.xml

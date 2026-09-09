@@ -11,7 +11,7 @@
   "renderStatus": "live",
   "organizationSlug": "sourceweave-app",
   "repository": "https://github.com/sourceweave-app/app",
-  "liveUrl": "https://sourceweave.onrender.com/",
+  "liveUrl": "https://sourceweaveapp.com/",
   "homepage": "individually designed full website",
   "importRoute": "/#/import",
   "subject": "Health record provenance & source explorer",
@@ -29,7 +29,7 @@
   "sections": [
     [
       "Provenance needs more than a logo",
-      "SourceWeave lists only sources identified in an authorized snapshot. A healthcare organization’s name tells a visitor where some returned information is attributed. It does not prove that every department, portal or historical record at that organization was included. The interface pairs source identity with available coverage details instead of showing a directory of assumed connections."
+      "SourceWeave lists only sources identified in an authorized snapshot. A healthcare organization\u2019s name tells a visitor where some returned information is attributed. It does not prove that every department, portal or historical record at that organization was included. The interface pairs source identity with available coverage details instead of showing a directory of assumed connections."
     ],
     [
       "Freshness has a specific meaning",
