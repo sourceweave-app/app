@@ -1,0 +1,55 @@
+{
+  "slug": "sourceweave",
+  "title": "SourceWeave",
+  "description": "Trace healthcare sources, returned record categories and supplied sync details with SourceWeave. Understand provenance and the limits of an authorized snapshot.",
+  "attribution": "Source discovery uses the FinchNode API.",
+  "domain": "sourceweaveapp.com",
+  "purpose": "Source provenance",
+  "theme": "Blue directory and provenance board",
+  "workflow": "Trace organizations, last-sync information, and per-source categories from an authorized snapshot.",
+  "repositoryStatus": "public",
+  "renderStatus": "live",
+  "organizationSlug": "sourceweave-app",
+  "repository": "https://github.com/sourceweave-app/app",
+  "liveUrl": "https://sourceweave.onrender.com/",
+  "homepage": "individually designed full website",
+  "importRoute": "/#/import",
+  "subject": "Health record provenance & source explorer",
+  "color": "#27559a",
+  "paper": "#f1f6fc",
+  "label": "Source notes",
+  "article": "trace-a-record-back-to-its-source",
+  "headline": "Trace a record back to its source",
+  "summary": "How SourceWeave separates organization identity, synchronization time and category coverage when presenting provenance.",
+  "topics": [
+    "data-provenance",
+    "healthcare-sources",
+    "data-lineage"
+  ],
+  "sections": [
+    [
+      "Provenance needs more than a logo",
+      "SourceWeave lists only sources identified in an authorized snapshot. A healthcare organization’s name tells a visitor where some returned information is attributed. It does not prove that every department, portal or historical record at that organization was included. The interface pairs source identity with available coverage details instead of showing a directory of assumed connections."
+    ],
+    [
+      "Freshness has a specific meaning",
+      "Last-sync information describes the supplied synchronization state. It is different from the date of the clinical event and does not guarantee that an organization had published its newest records before the sync. SourceWeave preserves those distinctions so a recent retrieval timestamp does not become a claim that every entry is current."
+    ],
+    [
+      "Categories show the boundary",
+      "Per-source category information helps explain what the snapshot actually contains. Missing categories and warnings are part of that explanation, not clutter to hide. An absent category cannot establish that no event occurred. If two sources disagree, this viewer provides context for review rather than deciding which record is clinically correct."
+    ],
+    [
+      "The connection map",
+      "Our architecture routes authorization and normalized record retrieval through FinchNode, then through a connection service to this source-focused interface. The diagram on the homepage explains that path; it is not a list of organizations already connected by a visitor. The privacy notice explains the current authorization and data-handling setup."
+    ],
+    [
+      "Inspect the evidence available",
+      "Live production activation remains pending. Once a visitor can authorize a connection, the source panel will be limited to what is returned for that session. The public repository makes the rendering and connection boundaries inspectable. SourceWeave concentrates on the provenance fields available in the returned snapshot, keeping that practical scope visible throughout the interface."
+    ]
+  ],
+  "reference": [
+    "FinchNode developer documentation",
+    "https://finchnode.com/developers"
+  ]
+}

@@ -1,6 +1,6 @@
-# SourceWeave
+# SourceWeave — Health record provenance & source explorer
 
-See where a health record begins. Source discovery uses the FinchNode API.
+Trace healthcare sources, returned record categories and supplied sync details with SourceWeave. Understand provenance and the limits of an authorized snapshot.
 
 **Site:** https://sourceweave.onrender.com/  
 **Repository:** https://github.com/sourceweave-app/app
@@ -52,3 +52,22 @@ A real patient must perform their own EHR authentication and consent; these test
 ## Domain candidate
 
 `sourceweaveapp.com` was available on September 8, 2026; Porkbun displayed $11.08 for initial registration and renewal. No domain was purchased. Availability and price can change. Add it to Render and the backend's explicit origin allowlist before use.
+
+<!-- public-discovery -->
+## Public guide and project context
+
+[Trace a record back to its source](https://sourceweave.onrender.com/guides/trace-a-record-back-to-its-source.html) — How SourceWeave separates organization identity, synchronization time and category coverage when presenting provenance.
+
+[Search SourceWeave guides](https://sourceweave.onrender.com/guides/) · [About the site](https://sourceweave.onrender.com/about.html) · [Sitemap](https://sourceweave.onrender.com/sitemap.xml)
+
+SourceWeave is a standalone product with its own interface, documentation and repository, prepared for independent business operation and continued development. Its FinchNode integration is documented in the code. Live production activation remains pending.
+
+## Public-page build and discoverability
+
+Edit `content/seo.json` for reviewed article text and site metadata. `npm run build` generates public HTML pages, a sitemap, social metadata and structured data, then prerenders the actual React homepage. `npm run test:seo` checks the built crawl surface after a build. Public guide search filters only public text in the browser; no patient data or search analytics enter the index.
+
+Keep canonical URLs on the deployed origin until a custom domain is registered and configured. Add only public, canonical pages to the sitemap. Validate links, mobile layout and the built HTML after editorial changes. Search engine indexing and rich results are not guaranteed.
+
+## Independent business handoff
+
+[Business handoff](HANDOFF.md) covers product identity, the receiving business’s production setup, domain migration, search verification and ongoing editorial maintenance.
