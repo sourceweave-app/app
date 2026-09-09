@@ -29,7 +29,7 @@
   "sections": [
     [
       "Provenance needs more than a logo",
-      "SourceWeave lists only sources identified in an authorized snapshot. A healthcare organization\u2019s name tells a visitor where some returned information is attributed. It does not prove that every department, portal or historical record at that organization was included. The interface pairs source identity with available coverage details instead of showing a directory of assumed connections."
+      "SourceWeave lists only sources identified in an authorized snapshot. A healthcare organization’s name tells a visitor where some returned information is attributed. It does not prove that every department, portal or historical record at that organization was included. The interface pairs source identity with available coverage details instead of showing a directory of assumed connections."
     ],
     [
       "Freshness has a specific meaning",
@@ -52,5 +52,117 @@
     "FinchNode developer documentation",
     "https://finchnode.com/developers"
   ],
-  "googleVerification": "TMdY5YFKPrSoVv3fC5iyCopvPVAm9JPLyi2OVYoBrOk"
+  "googleVerification": "TMdY5YFKPrSoVv3fC5iyCopvPVAm9JPLyi2OVYoBrOk",
+  "guideIntro": "Explore record provenance, source-system matching, last-sync timestamps and the difference between authorized categories and records attributed to a source.",
+  "finchnodeContext": "SourceWeave uses the source metadata accompanying a FinchNode response to organize its provenance view. It only attributes an entry to a selected source when the record’s source identifier matches that source system; a familiar organization name is not treated as evidence of complete coverage.",
+  "articles": [
+    {
+      "slug": "trace-health-records-to-a-source",
+      "title": "How to trace a health record to its source in SourceWeave",
+      "description": "Inspect organization labels, source-system identifiers and per-category counts to understand the provenance shown in an authorized snapshot.",
+      "published": "2026-09-09",
+      "sections": [
+        {
+          "heading": "Start with the returned source cards",
+          "paragraphs": [
+            "Each card represents source metadata returned with the snapshot. It shows an organization label when available, the source-system identifier and a last-sync field. The cards are not a directory of every provider a person has ever visited."
+          ]
+        },
+        {
+          "heading": "Select a source and read the matching count",
+          "paragraphs": [
+            "Choose “Inspect provenance” on a card. SourceWeave counts entries whose source field exactly matches the selected source’s system identifier. That is a specific matching rule, not an inference from similar organization names or nearby dates."
+          ],
+          "items": [
+            "Read the source-system identifier as well as the friendly label.",
+            "Select the source you mean to inspect.",
+            "Compare the matched total with the category counts below it.",
+            "Expand source metadata when a label or timestamp needs more context."
+          ]
+        },
+        {
+          "heading": "Keep unmatched information unresolved",
+          "paragraphs": [
+            "If a returned record lacks the matching source field, this view does not assign it to a source by guesswork. A low count can therefore describe the attribution available in the response rather than the total information held by the healthcare organization."
+          ]
+        },
+        {
+          "heading": "Use provenance to frame a precise question",
+          "paragraphs": [
+            "Instead of asking whether the app has everything, ask which source identifiers and categories were returned and which records explicitly identify them. SourceWeave does not establish complete clinical coverage or availability at every organization using an EHR. Live connections remain pending production activation."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Does choosing a source make a new provider connection?",
+          "answer": "No. It selects a source already present in the returned snapshot."
+        },
+        {
+          "question": "Why might a record not appear in a source count?",
+          "answer": "The provenance view requires an exact match between the record’s source field and the selected system identifier."
+        }
+      ],
+      "references": [
+        {
+          "label": "SourceWeave interface implementation",
+          "url": "https://github.com/sourceweave-app/app/blob/main/app/view.tsx"
+        }
+      ]
+    },
+    {
+      "slug": "last-synced-and-record-dates",
+      "title": "Last synced is not the date every health record was created",
+      "description": "Understand the difference between a source sync timestamp, an individual event date and the category counts shown in SourceWeave.",
+      "published": "2026-09-09",
+      "sections": [
+        {
+          "heading": "A timestamp needs a subject",
+          "paragraphs": [
+            "The source card’s last-sync field describes the source metadata supplied in the snapshot. It is not a replacement for the date on each medication, observation or encounter. A recently synced source can contain much older events."
+          ]
+        },
+        {
+          "heading": "Three counts answer three questions",
+          "paragraphs": [
+            "Sources returned counts the source metadata entries. Authorized categories counts the categories available to this session. Missing categories reflects the response metadata. None of these, by itself, establishes the number of clinical events expected to exist at a provider."
+          ]
+        },
+        {
+          "heading": "Look at the source object when a date is absent",
+          "paragraphs": [
+            "Expand the source metadata to see the supplied fields. A missing or unclear sync date should remain a question about the response. SourceWeave does not run a background source refresh merely because a visitor switches between cards."
+          ]
+        },
+        {
+          "heading": "Describe freshness without overclaiming it",
+          "paragraphs": [
+            "An operator extending the product should say whether a time refers to a source sync, a clinical event, or the time the browser received data. Labeling all three as “updated” would hide distinctions the provenance view is intended to preserve. The current connection request is a one-time transfer, not a continuously updating feed."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Does a recent sync date mean every event happened recently?",
+          "answer": "No. A sync timestamp and the dates of individual events describe different things."
+        },
+        {
+          "question": "Does selecting another card refresh that source?",
+          "answer": "No. It changes the provenance view within the existing returned snapshot."
+        }
+      ],
+      "finchnode": {
+        "heading": "Source metadata from FinchNode, provenance questions in SourceWeave",
+        "text": "SourceWeave reads the source and category metadata returned through FinchNode and turns it into an inspectable provenance view. The site’s task is to explain what those fields support, including the limits of a timestamp or source count.",
+        "label": "FinchNode record integration overview",
+        "url": "https://finchnode.com/ehr-integration-api"
+      },
+      "references": [
+        {
+          "label": "SourceWeave interface implementation",
+          "url": "https://github.com/sourceweave-app/app/blob/main/app/view.tsx"
+        }
+      ]
+    }
+  ]
 }
