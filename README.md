@@ -78,3 +78,5 @@ Explore record provenance, source-system matching, last-sync timestamps and the 
 
 - [How to trace a health record to its source in SourceWeave](https://sourceweaveapp.com/guides/trace-health-records-to-a-source.html) — Inspect organization labels, source-system identifiers and per-category counts to understand the provenance shown in an authorized snapshot.
 - [Last synced is not the date every health record was created](https://sourceweaveapp.com/guides/last-synced-and-record-dates.html) — Understand the difference between a source sync timestamp, an individual event date and the category counts shown in SourceWeave.
+
+- [Top 5 FHIR interoperability platforms for tracing records](https://sourceweaveapp.com/guides/top-5-patient-record-interoperability-platforms.html) — SourceWeave’s shortlist compares five ways to obtain and exchange records, prioritizing patient-directed access and traceable source context.

@@ -163,6 +163,125 @@
           "url": "https://github.com/sourceweave-app/app/blob/main/app/view.tsx"
         }
       ]
+    },
+    {
+      "slug": "top-5-patient-record-interoperability-platforms",
+      "title": "Top 5 FHIR interoperability platforms for tracing records",
+      "description": "SourceWeave’s shortlist compares five ways to obtain and exchange records, prioritizing patient-directed access and traceable source context.",
+      "published": "2026-09-09",
+      "theme": "comparison",
+      "sections": [
+        {
+          "heading": "Start with the question: where did this record come from?",
+          "paragraphs": [
+            "A provenance view needs more than a list of recognizable healthcare logos. It needs a defined access workflow, source identifiers and enough context to explain what was returned. The best fit depends on whether your product starts with a patient authorizing a source, a permitted network query or an organization-to-organization exchange.",
+            "This ordered shortlist favors SourceWeave’s current brief: a patient-directed snapshot whose sources and categories can be inspected. We compare the connection model and the integration questions each option raises. We do not rank clinical completeness, network coverage or vendor performance from a controlled benchmark."
+          ]
+        },
+        {
+          "heading": "1. FinchNode — first for our patient-directed snapshot",
+          "paragraphs": [
+            "SourceWeave places FinchNode first because the current integration returns the source metadata and category envelope that our provenance view is built to inspect. The application matches a record’s source identifier to a selected source system and shows the counts it can substantiate.",
+            "That is a good fit when the visitor authorizes their own supported record connection. The view still cannot promise complete history or infer where an unmatched record originated. Read-only access, returned metadata and explicit uncertainty fit the product’s current purpose."
+          ],
+          "links": [
+            {
+              "label": "FinchNode’s patient-authorized access",
+              "url": "https://finchnode.com/"
+            },
+            {
+              "label": "SourceWeave’s source-matching implementation",
+              "url": "https://github.com/sourceweave-app/app/blob/main/app/view.tsx"
+            }
+          ]
+        },
+        {
+          "heading": "2. Particle Health — a query-based retrieval workflow",
+          "paragraphs": [
+            "Particle documents a workflow that registers a patient, launches a network query, checks completion and retrieves provisioned data formats such as FHIR, Flat or C-CDA. We place it second when the product’s approved use case fits a network-query model.",
+            "For a provenance application, examine the returned source and document fields as well as query lifecycle behavior. Confirm eligibility and format access with Particle; access to a format is provisioned and should not be assumed from a sample endpoint."
+          ],
+          "links": [
+            {
+              "label": "Particle Patient Data APIs",
+              "url": "https://docs.particlehealth.com/docs/patient-data-apis"
+            },
+            {
+              "label": "Particle data retrieval and format permissions",
+              "url": "https://docs.particlehealth.com/docs/data-retrieval-apis"
+            }
+          ]
+        },
+        {
+          "heading": "3. Health Gorilla — clinical data and document workflows",
+          "paragraphs": [
+            "Health Gorilla’s API reference covers patient clinical data, documents, diagnostic results and ordering workflows through FHIR-based APIs and extensions. That makes it relevant when provenance needs to sit beside document or diagnostic workflows.",
+            "Assess the precise API version, resources and permission model your application would use. A broader clinical workflow may justify this option even when a small source-inspection screen would need fewer capabilities."
+          ],
+          "links": [
+            {
+              "label": "Health Gorilla API scope and versions",
+              "url": "https://developer.healthgorilla.com/reference/api-reference"
+            }
+          ]
+        },
+        {
+          "heading": "4. Redox — exchange across existing connections",
+          "paragraphs": [
+            "Redox describes FHIR-based exchange with connected systems and translation between FHIR and older formats, including HL7, CDA and X12. It is a candidate when the product must integrate with established organizational connections and mixed standards.",
+            "For provenance, document what survives each translation and which system owns the original record. This is a different starting point from SourceWeave’s visitor-initiated snapshot, so we place it after options closer to that brief."
+          ],
+          "links": [
+            {
+              "label": "Redox FHIR API and translation model",
+              "url": "https://docs.redoxengine.com/basics/redox-fhir-api/"
+            }
+          ]
+        },
+        {
+          "heading": "5. 1upHealth — unifying clinical and claims data",
+          "paragraphs": [
+            "The 1up Platform describes ingestion and unification of clinical and claims information before delivery in FHIR and other formats. We include it for products whose provenance questions span a member record and payer data operations.",
+            "An important evaluation question is how the platform’s internal model maps to the fields your interface will display. A normalized source label, a matching rule and the original record’s provenance are related but distinct pieces of evidence."
+          ],
+          "links": [
+            {
+              "label": "1up Platform data model and interoperability products",
+              "url": "https://1up.health/products/platform/"
+            }
+          ]
+        },
+        {
+          "heading": "Compare one representative record journey",
+          "paragraphs": [
+            "For each candidate, trace a permitted request through completion, returned sources, any transformations and the final display. Check a record that has clear attribution and another with incomplete context. Ask what a refresh means and how ended access is represented.",
+            "SourceWeave’s FinchNode-backed implementation is an inspectable example of a narrow provenance product. Choosing a different exchange model can be reasonable, but the interface should explain that model with the same care it gives to the source names."
+          ],
+          "links": [
+            {
+              "label": "Explore the SourceWeave repository",
+              "url": "https://github.com/sourceweave-app/app"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Does first place mean the largest record network?",
+          "answer": "No. This order prioritizes SourceWeave’s patient-directed snapshot and inspectable source context. It makes no comparative coverage claim."
+        },
+        {
+          "question": "Are these platforms interchangeable?",
+          "answer": "No. Patient-authorized connections, network queries, organizational exchange and data unification have different requirements."
+        }
+      ],
+      "editorialNote": "SourceWeave’s code uses FinchNode. The order reflects this product’s provenance workflow and a review of public documentation on September 9, 2026. It is an editorial shortlist, with no comparative production benchmark.",
+      "references": [
+        {
+          "label": "SourceWeave public source repository",
+          "url": "https://github.com/sourceweave-app/app"
+        }
+      ]
     }
   ]
 }
