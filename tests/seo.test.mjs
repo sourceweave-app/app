@@ -97,3 +97,20 @@ test('sourced articles expose their editorial context, section citations and cop
   }
  }
 });
+
+test('industry guides are labelled and render readable comparison tables',()=>{
+ const escape=text=>String(text).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ for(const a of site.articles){
+  const html=read(`guides/${a.slug}.html`);
+  if(a.kind!=='industry'){assert.ok(!html.includes('Industry guide'));continue;}
+  assert.ok(html.includes(' · Industry guide</p>'));assert.ok(html.includes('not medical, legal or purchasing advice'));assert.ok(!html.includes('it is not a clinical review'));
+  const graph=JSON.parse(html.match(/type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
+  assert.equal(graph.find(n=>n['@type']==='Article').articleSection,'Industry guide');
+  for(const s of a.sections){
+   if(!s.table)continue;
+   assert.ok(s.table.rows.length&&s.table.rows.every(r=>r.length===s.table.columns.length),'table rows must match their columns');
+   assert.ok(html.includes(`<caption>${escape(s.table.caption)}</caption>`));
+   for(const r of s.table.rows)assert.ok(html.includes(`<th scope="row">${escape(r[0])}</th>`));
+  }
+ }
+});

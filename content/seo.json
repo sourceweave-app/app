@@ -282,6 +282,152 @@
           "url": "https://github.com/sourceweave-app/app"
         }
       ]
+    },
+    {
+      "slug": "tefca-in-2026",
+      "title": "TEFCA in 2026: QHINs, individual access and what it means for small clinics",
+      "description": "A plain-English update on TEFCA: the designated QHINs, the six exchange purposes, patient individual access, CMS Aligned Networks and information-blocking enforcement.",
+      "published": "2026-09-28",
+      "kind": "industry",
+      "theme": "industry",
+      "sections": [
+        {
+          "heading": "What TEFCA is",
+          "paragraphs": [
+            "The Trusted Exchange Framework and Common Agreement (TEFCA) is the federal framework for exchanging health information between networks nationwide. Instead of every organization negotiating with every other, organizations join through a Qualified Health Information Network (QHIN), and QHINs exchange with each other under one set of rules.",
+            "The federal Assistant Secretary for Technology Policy (ASTP/ONC) sets the policy, and The Sequoia Project serves as the Recognized Coordinating Entity that designates QHINs and publishes operating procedures."
+          ],
+          "links": [
+            {
+              "label": "ASTP/ONC: TEFCA",
+              "url": "https://healthit.gov/policy/tefca/"
+            }
+          ]
+        },
+        {
+          "heading": "The designated QHINs",
+          "paragraphs": [
+            "The Recognized Coordinating Entity lists 11 designated QHINs, with more candidates onboarding. Many EHR vendors connect through one of them, so the QHIN your clinic uses is often decided by your EHR."
+          ],
+          "items": [
+            "CommonWell Alliance",
+            "eClinicalWorks Prismanet",
+            "eHealth Exchange",
+            "Epic Nexus",
+            "Health Gorilla",
+            "Kno2",
+            "Konza Health",
+            "Medallies",
+            "Netsmart",
+            "Oracle Health Information Network",
+            "Surescripts Health Information Network"
+          ],
+          "links": [
+            {
+              "label": "Designated QHINs",
+              "url": "https://rce.sequoiaproject.org/designated-qhins/"
+            }
+          ]
+        },
+        {
+          "heading": "Six exchange purposes, including individual access",
+          "paragraphs": [
+            "TEFCA exchange is organized by purpose. ASTP/ONC lists six: treatment, payment, health care operations, public health, government benefits determination and individual access services. Individual access is the purpose that lets a patient, through an approved app, request their own records across the network.",
+            "An updated operating procedure for individual access took effect on August 3, 2026, setting identity-verification requirements for these requests and when participants must respond. For patients, the practical result is a more consistent route to records held by organizations they may have forgotten about."
+          ],
+          "links": [
+            {
+              "label": "ASTP/ONC: TEFCA exchange purposes",
+              "url": "https://healthit.gov/policy/tefca/"
+            },
+            {
+              "label": "Individual Access Services SOP update",
+              "url": "https://rce.sequoiaproject.org/updated-individual-access-services-ias-implementation-sop-released/"
+            }
+          ]
+        },
+        {
+          "heading": "How much is actually flowing",
+          "paragraphs": [
+            "Volume has grown quickly. In February 2026, ASTP/ONC reported that nearly 500 million health records had been exchanged through TEFCA, up from about 10 million in January 2025."
+          ],
+          "links": [
+            {
+              "label": "ASTP/ONC: nearly 500 million records exchanged",
+              "url": "https://healthit.gov/news/tefca-americas-national-interoperability-network-reaches-nearly-500-million-health-records-exchanged-as-hhs-leverages-technology-and-ai-to-lower-costs-and-reduce-burden/"
+            }
+          ]
+        },
+        {
+          "heading": "CMS Aligned Networks and “Kill the Clipboard”",
+          "paragraphs": [
+            "In July 2025, CMS announced a Health Tech Ecosystem in which more than 60 companies pledged to support patient-centered data exchange. It has two main strands: the CMS Interoperability Framework, under which networks self-attest to become CMS Aligned Networks, and “Kill the Clipboard”, which aims to replace paper intake with QR codes, FHIR data and SMART Health Cards and Links.",
+            "CMS says numerous early adopters reached general availability in July 2026. For clinics, it is worth asking your EHR vendor and any intake-software vendor whether they have pledged and what that will change at check-in."
+          ],
+          "links": [
+            {
+              "label": "CMS: Health Tech Ecosystem announcement",
+              "url": "https://www.cms.gov/newsroom/press-releases/white-house-tech-leaders-commit-create-patient-centric-healthcare-ecosystem"
+            },
+            {
+              "label": "CMS Interoperability Framework",
+              "url": "https://www.cms.gov/initiatives/health-technology-ecosystem/overview/interoperability-framework"
+            },
+            {
+              "label": "CMS: Kill the Clipboard",
+              "url": "https://www.cms.gov/health-tech-ecosystem/early-adopters/kill-the-clipboard"
+            }
+          ]
+        },
+        {
+          "heading": "Information blocking: enforcement has started",
+          "paragraphs": [
+            "In September 2025, the HHS Office of Inspector General and ASTP/ONC issued a joint enforcement alert. Health IT developers, health information exchanges and networks can face civil money penalties of up to $1 million per violation; healthcare providers face disincentives through CMS programs instead. The alert said enforcement would prioritize cases involving patient harm or impaired care."
+          ],
+          "links": [
+            {
+              "label": "Information blocking enforcement alert",
+              "url": "https://healthit.gov/information-blocking/enforcement-alert/"
+            }
+          ]
+        },
+        {
+          "heading": "Rules still in motion",
+          "paragraphs": [
+            "The HTI-4 final rule, covering e-prescribing and electronic prior authorization, took effect in October 2025. The HTI-5 proposal, which would remove many certification criteria, was still pending when we checked in September 2026. Watch for its final text before planning EHR changes around it."
+          ],
+          "links": [
+            {
+              "label": "ASTP/ONC: HTI rules",
+              "url": "https://healthit.gov/regulations/hti-rules/"
+            }
+          ]
+        },
+        {
+          "heading": "What a small clinic should do now",
+          "paragraphs": [
+            "You do not need to join a QHIN yourself. Most of the work sits with your vendors, but a few questions are worth asking."
+          ],
+          "items": [
+            "Which QHIN does our EHR connect through, and is it switched on for our practice?",
+            "Which exchange purposes do we respond to today, including individual access?",
+            "How are requests for patient records handled, and how quickly do we respond?",
+            "Has our EHR or intake vendor joined the CMS Health Tech Ecosystem pledge?",
+            "Who in the practice owns information-blocking policy and exceptions?"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Do patients have to do anything to use TEFCA?",
+          "answer": "Patients use individual access through an app that participates in TEFCA. The app handles the request and identity verification; they do not join a network directly."
+        },
+        {
+          "question": "Does TEFCA replace my patient portal?",
+          "answer": "No. A portal shows records held by one organization. TEFCA individual access can help an app find records across many organizations."
+        }
+      ],
+      "editorialNote": "Written from ASTP/ONC, CMS and Recognized Coordinating Entity sources reviewed September 28, 2026. This is general information, not legal advice."
     }
   ]
 }

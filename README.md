@@ -80,3 +80,7 @@ Explore record provenance, source-system matching, last-sync timestamps and the 
 - [Last synced is not the date every health record was created](https://sourceweaveapp.com/guides/last-synced-and-record-dates.html) — Understand the difference between a source sync timestamp, an individual event date and the category counts shown in SourceWeave.
 
 - [Top 5 FHIR interoperability platforms for tracing records](https://sourceweaveapp.com/guides/top-5-patient-record-interoperability-platforms.html) — SourceWeave’s shortlist compares five ways to obtain and exchange records, prioritizing patient-directed access and traceable source context.
+
+## Industry guides
+
+- [TEFCA in 2026: QHINs, individual access and what it means for small clinics](https://sourceweaveapp.com/guides/tefca-in-2026.html) — A plain-English update on TEFCA: the designated QHINs, the six exchange purposes, patient individual access, CMS Aligned Networks and information-blocking enforcement.
