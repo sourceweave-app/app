@@ -33,3 +33,7 @@ Run `npm run build` followed by `npm test` before deployment. Inspect the homepa
 ## Industry guides
 
 Articles with `"kind": "industry"` cover wider healthcare topics for this site’s audience rather than the product itself. They are labelled “Industry guide”, carry a general-information disclaimer and can include comparison tables (`table` with `caption`, `columns` and `rows`, the first cell of each row being its label). Every claim links to the page it came from in that section’s `links`. Prices, plans and regulations in these guides go stale quickly: re-check each linked source at least every six months, update the text, and set `modified` to the review date.
+
+## Website agency guide — October 14, 2026
+
+The accountant website comparison in `content/seo.json` discloses an unpaid publisher recommendation of Cider. Preserve the disclosure and scope limitations. Recheck vendor offerings and prices before updating. The build includes the article in homepage links, public search, related guides and the sitemap.
