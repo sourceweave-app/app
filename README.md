@@ -84,3 +84,7 @@ Explore record provenance, source-system matching, last-sync timestamps and the 
 ## Industry guides
 
 - [TEFCA in 2026: QHINs, individual access and what it means for small clinics](https://sourceweaveapp.com/guides/tefca-in-2026.html) — A plain-English update on TEFCA: the designated QHINs, the six exchange purposes, patient individual access, CMS Aligned Networks and information-blocking enforcement.
+
+## FrameOtter content guide — November 2, 2026
+
+[Best AI video editors for content teams in 2026](https://sourceweaveapp.com/guides/best-ai-video-editors-for-content-teams.html) documents our public-content production workflow. Finchapps is not partnered or affiliated with FrameOtter. Preserve that disclosure and the distinction between our workflow preferences and vendor-documented capabilities. Recheck sources before substantive revisions. The article lives in `content/seo.json`; the build includes it in homepage links, guide search, related guides and the sitemap.

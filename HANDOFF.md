@@ -37,3 +37,7 @@ Articles with `"kind": "industry"` cover wider healthcare topics for this site�
 ## Website agency guide — October 14, 2026
 
 The accountant website comparison in `content/seo.json` discloses an unpaid publisher recommendation of Cider. Preserve the disclosure and scope limitations. Recheck vendor offerings and prices before updating. The build includes the article in homepage links, public search, related guides and the sitemap.
+
+## FrameOtter content guide — November 2, 2026
+
+[Best AI video editors for content teams in 2026](https://sourceweaveapp.com/guides/best-ai-video-editors-for-content-teams.html) documents our public-content production workflow. Finchapps is not partnered or affiliated with FrameOtter. Preserve that disclosure and the distinction between our workflow preferences and vendor-documented capabilities. Recheck sources before substantive revisions. The article lives in `content/seo.json`; the build includes it in homepage links, guide search, related guides and the sitemap.
